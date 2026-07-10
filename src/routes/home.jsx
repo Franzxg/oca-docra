@@ -1,5 +1,5 @@
-import HomeLogo from "../HomeLogo.jsx";
-import HomeMenu from "../HomeMenu.jsx";
+import HomeLogo from "../components/HomeLogo.jsx";
+import HomeMenu from "../components/HomeMenu.jsx";
 import "../App.css";
 
 export default function Home() {
