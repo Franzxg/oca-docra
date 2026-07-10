@@ -1,3 +1,10 @@
+import BioSection from "../components/BioSection";
+
 export default function Biografia() {
-  return <>{/*<h1>Biografia</h1>*/}</>;
+  return (
+    <>
+      <h2>Biografia</h2>
+      <BioSection />
+    </>
+  );
 }

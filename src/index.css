@@ -69,7 +69,8 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: #c0a400;
+  text-align: center;
 }
 
 h1 {

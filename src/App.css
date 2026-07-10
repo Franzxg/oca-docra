@@ -70,6 +70,15 @@
   }
 }
 
+.bio-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  text-align: center;
+  margin: 0 30%;
+  color: #6e1707;
+}
+
 .page-content {
   padding-top: 15%; /* stessa altezza della navbar, per non farci finire sotto il contenuto */
   padding-bottom: 5%;
