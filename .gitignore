@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# react router: cartella di cache generata automaticamente, non va versionata
+.react-router/

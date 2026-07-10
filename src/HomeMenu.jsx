@@ -1,10 +1,12 @@
+import { Link } from "react-router";
+
 function HomeMenu() {
   return (
     <div className="home-menu">
-      <a href="">Illustrazioni</a>
-      <a href="">Almanacco dell'oca</a>
-      <a href="">Contatti</a>
-      <a href="">Biografia</a>
+      <Link to="/illustrazioni">Illustrazioni</Link>
+      <Link to="/racconti">Almanacco dell'oca</Link>
+      <Link to="/contatti">Contatti</Link>
+      <Link to="/biografia">Biografia</Link>
     </div>
   );
 }
