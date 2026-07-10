@@ -70,7 +70,9 @@
   }
 }
 
-.bio-text {
+.bio-text,
+.illustrazioni-text,
+.racconti-text {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
