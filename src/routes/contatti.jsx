@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import ContactsSection from "../components/ContactsSection";
 
 export default function Contatti() {
   return (
     <>
-      <Navbar></Navbar>
-      <Footer></Footer>
+      <ContactsSection></ContactsSection>
       {/* <h1>Contatti</h1> */}
     </>
   );

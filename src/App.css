@@ -28,13 +28,15 @@
 }
 
 .navbar {
-  position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   padding: 10px 20px;
   width: 100%;
-  margin-top: 0px;
+  height: 70px;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 10;
 }
 
 .div-navbar {
@@ -53,16 +55,37 @@
   }
 }
 
+.contacts-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  text-align: center;
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+    margin: 0 30%;
+  }
+}
+
+.page-content {
+  padding-top: 15%; /* stessa altezza della navbar, per non farci finire sotto il contenuto */
+  padding-bottom: 5%;
+  flex: 1;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 .footer {
-  position: fixed;
-  margin-bottom: 0;
   width: 100%;
   background-color: #c0a400;
   color: #fff;
   text-align: left;
   padding: 10px;
-  bottom: 0;
-
+  margin-top: auto;
+  box-sizing: border-box;
   p {
     font-size: x-small;
   }

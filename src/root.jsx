@@ -1,5 +1,8 @@
 import { Outlet, Scripts, ScrollRestoration, Meta, Links } from "react-router";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./index.css";
+import "./App.css";
 
 export function Layout({ children }) {
   return (
@@ -22,5 +25,13 @@ export function Layout({ children }) {
 }
 
 export default function Root() {
-  return <Outlet />;
+  return (
+    <>
+      <Navbar />
+      <div className="page-content">
+        <Outlet />
+      </div>
+      <Footer />
+    </>
+  );
 }
