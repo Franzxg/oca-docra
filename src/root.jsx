@@ -11,7 +11,7 @@ export function Layout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="../public/favicon.ico" sizes="any" />
-        <title>oca-docra</title>
+        <title>Oca d'Ocra</title>
         <Meta />
         <Links />
       </head>
