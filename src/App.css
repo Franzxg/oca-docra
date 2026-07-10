@@ -27,6 +27,31 @@
   color: #c0a400;
 }
 
+.navbar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.div-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  a {
+    text-decoration: none;
+    color: #c0a400;
+  }
+
+  img {
+    width: 250px;
+    height: auto;
+  }
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

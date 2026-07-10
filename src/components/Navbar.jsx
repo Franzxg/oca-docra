@@ -1,21 +1,22 @@
 import { Link } from "react-router";
 import Home from "../routes/home";
 import HomeLogo from "./HomeLogo";
+import logo from "../imgs/logo-home.png";
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <div>
+      <div className="div-navbar">
         <Link to="/">Home</Link>
         <Link to="/illustrazioni">Illustrazioni</Link>
         <Link to="/racconti">Almanacco dell'oca</Link>
         <Link to="/biografia">Biografia</Link>
         <Link to="/contatti">Contatti</Link>
       </div>
-      <div>
-        <HomeLogo />
+      <div className="div-navbar">
+        <img src={logo} alt="Logo" className="logo-navbar" />
       </div>
-      <div>
+      <div className="div-navbar">
         <a
           href="https://www.instagram.com/ocadocra/"
           target="_blank"
