@@ -4,7 +4,7 @@ export default function Illustrazioni() {
   return (
     <>
       <h2>Illustrazioni</h2>
-      <p class="illustrazioni-text">
+      <p className="illustrazioni-text">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
         cumque aut ad, libero praesentium distinctio ratione vitae adipisci
         optio iste, dolorum architecto? Sint corporis eius quae, aut consequatur
