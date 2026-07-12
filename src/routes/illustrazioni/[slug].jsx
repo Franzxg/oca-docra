@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import ImageLightboxGallery from "../../components/ImageLightboxGallery.jsx";
 import { illustrazioni } from "../../data/illustrazioniData.js";
 
 export default function IllustrazioneDettaglio() {
@@ -12,11 +13,7 @@ export default function IllustrazioneDettaglio() {
   return (
     <div className="illustrazione-dettaglio">
       <h2>{progetto.title}</h2>
-      <img
-        src={progetto.image}
-        alt={progetto.title}
-        style={{ maxWidth: "100%" }}
-      />
+      <ImageLightboxGallery images={progetto.gallery} />
       <p>{progetto.fullDescription}</p>
     </div>
   );
