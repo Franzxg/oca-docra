@@ -26,5 +26,6 @@ dist-ssr
 # react router: cartella di cache generata automaticamente, non va versionata
 .react-router/
 
-# illustrazioni 
+# illustrazioni e racconti
 src/imgs/illustrazioni/
+src/imgs/racconti/

@@ -11,6 +11,7 @@ export default function IllustrationsSection() {
           image={illustrazione.image}
           description={illustrazione.description}
           slug={illustrazione.slug}
+          basePath="/illustrazioni"
         />
       ))}
     </div>

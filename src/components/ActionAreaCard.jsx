@@ -5,10 +5,16 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 
-export default function ActionAreaCard({ title, description, image, slug }) {
+export default function ActionAreaCard({
+  title,
+  description,
+  image,
+  slug,
+  basePath,
+}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea component={Link} to={`/illustrazioni/${slug}`}>
+      <CardActionArea component={Link} to={`${basePath}/${slug}`}>
         <CardMedia component="img" height="140" image={image} alt={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
