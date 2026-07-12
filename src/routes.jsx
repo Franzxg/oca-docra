@@ -7,4 +7,5 @@ export default [
   route("contatti", "routes/contatti.jsx"),
   route("biografia", "routes/biografia.jsx"),
   route("racconti", "routes/racconti.jsx"),
+  route("racconti/:slug", "routes/racconti/[slug].jsx"),
 ];
