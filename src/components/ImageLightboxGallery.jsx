@@ -4,23 +4,30 @@ const FADE_DURATION = 250;
 
 export default function ImageLightboxGallery({ images }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const [isClosing, setIsClosing] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); // controlla lo stato "aperto" per l'animazione
   const closeTimeoutRef = useRef(null);
 
   function openImage(index) {
-    // Se stavamo già chiudendo un'immagine precedente, annulla quel timeout
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
-    setIsClosing(false);
     setSelectedIndex(index);
   }
 
   function closeImage() {
-    setIsClosing(true);
+    setIsVisible(false); // parte il fade-out
     closeTimeoutRef.current = setTimeout(() => {
-      setSelectedIndex(null);
-      setIsClosing(false);
+      setSelectedIndex(null); // rimuove davvero l'elemento, DOPO l'animazione
     }, FADE_DURATION);
   }
+
+  // Appena selectedIndex cambia (nuova immagine aperta), aspetta un frame e poi rendi visibile
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      const frameId = requestAnimationFrame(() => {
+        setIsVisible(true);
+      });
+      return () => cancelAnimationFrame(frameId);
+    }
+  }, [selectedIndex]);
 
   useEffect(() => {
     function handleKeyDown(e) {
@@ -54,7 +61,7 @@ export default function ImageLightboxGallery({ images }) {
 
       {selected && (
         <div
-          className={`lightbox-overlay ${isClosing ? "lightbox-closing" : "lightbox-open"}`}
+          className={`lightbox-overlay ${isVisible ? "lightbox-open" : "lightbox-closing"}`}
           onClick={closeImage}
         >
           <button
