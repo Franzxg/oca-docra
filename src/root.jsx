@@ -1,4 +1,11 @@
 import { Outlet, Scripts, ScrollRestoration, Meta, Links } from "react-router";
+import "@fontsource/pt-serif/400.css"; // regular
+import "@fontsource/pt-serif/700.css"; // bold
+import "@fontsource/pt-serif/400-italic.css"; // corsivo
+import "@fontsource/pt-serif/700-italic.css"; // grassetto corsivo
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import theme from "./theme.js";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./index.css";
@@ -27,11 +34,14 @@ export function Layout({ children }) {
 export default function Root() {
   return (
     <>
-      <Navbar />
-      <div className="page-content">
-        <Outlet />
-      </div>
-      <Footer />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Navbar />
+        <div className="page-content">
+          <Outlet />
+        </div>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }
