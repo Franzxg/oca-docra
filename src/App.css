@@ -62,6 +62,11 @@
   gap: 24px;
   border-bottom: 1px solid rgba(192, 164, 0, 0.3);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  @media (max-width: 899px) {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .navbar-logo {
@@ -81,6 +86,14 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 899px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    row-gap: 12px;
+    column-gap: 24px;
+  }
 }
 
 .navbar-links a {
@@ -93,6 +106,12 @@
   transition:
     transform 0.2s ease,
     color 0.2s ease;
+  flex-basis: 28%;
+  text-align: center;
+
+  @media (min-width: 900px) {
+    flex-basis: auto;
+  }
 }
 
 .navbar-links a:hover {
