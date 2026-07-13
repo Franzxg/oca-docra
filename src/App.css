@@ -231,7 +231,9 @@
   grid-template-columns: 1fr;
   gap: 10px;
   text-align: center;
-  margin: 0 30%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
   color: #6e1707;
 }
 
