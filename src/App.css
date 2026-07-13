@@ -5,12 +5,20 @@
   grid-template-columns: 1fr 1fr;
   align-items: start;
   flex: 1;
+  @media (max-width: 899px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 .logo {
   width: 90%;
   display: block;
   margin: 1% 0 0 5%;
+  @media (max-width: 899px) {
+    width: 70%;
+    margin: 24px auto 0;
+  }
 }
 
 .home-menu {
@@ -21,6 +29,9 @@
   margin-left: 0px;
   margin-right: 15%;
   text-align: center;
+  @media (max-width: 899px) {
+    margin: 24px auto 0;
+  }
 }
 
 .home-menu a {
