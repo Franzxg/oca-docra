@@ -22,6 +22,7 @@ export default function ActionAreaCard({
       }}
     >
       <CardActionArea
+        className="action-card"
         component={Link}
         to={`${basePath}/${slug}`}
         sx={{

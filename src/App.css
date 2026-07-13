@@ -245,7 +245,7 @@
   box-sizing: border-box;
 }
 
-/* Stile per la pagina Illustrazioni */
+/* Stile per la pagina Illustrazioni e Almanacco */
 .illustrations-section,
 .racconti-section {
   display: grid;
@@ -253,6 +253,16 @@
   gap: 24px;
   padding: 24px 40px;
   justify-items: stretch;
+}
+
+.action-card {
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.action-card:hover {
+  transform: scale(1.03);
+  z-index: 2;
 }
 
 /* Stile del footer */
