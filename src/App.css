@@ -209,11 +209,13 @@
   }
 }
 
+/* Stile pagina Contatti*/
 .contacts-div {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
   text-align: center;
+  color: #6e1707;
 
   form {
     display: grid;
@@ -221,7 +223,86 @@
     gap: 10px;
     text-align: center;
     margin: 0 30%;
+
+    @media (max-width: 899px) {
+      margin: 0 10%;
+    }
   }
+
+  label {
+    color: #6e1707;
+    font-weight: 600;
+  }
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #6e1707;
+  font-weight: 600;
+}
+
+.contact-info svg {
+  font-size: 20px;
+}
+
+.contacts-div input,
+.contacts-div textarea {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #08060d;
+}
+
+.contacts-div input:focus,
+.contacts-div textarea:focus {
+  outline: 2px solid #c0a400;
+}
+
+.contacts-div textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contacts-div button {
+  background-color: #c0a400;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contacts-div button:hover {
+  background-color: #6e1707;
+}
+
+.contact-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.contact-social a {
+  color: #6e1707;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-social a:hover {
+  color: #c0a400;
 }
 
 .bio-text,

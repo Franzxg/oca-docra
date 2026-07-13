@@ -1,9 +1,48 @@
+import EmailIcon from "@mui/icons-material/Email";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import InstagramIcon from "@mui/icons-material/Instagram";
+
 export default function ContactsSection() {
   return (
     <>
       <div className="contacts-div">
-        <p>Email: ocadocra.illustrazioni@gmail.com</p>
-        <p>Telefono: +39 334 813 9839</p>
+        <p className="contact-info">
+          <EmailIcon /> ocadocra.illustrazioni@gmail.com
+        </p>
+        <p className="contact-info">
+          <LocalPhoneIcon /> +39 334 813 9839
+        </p>
+        <div className="contact-social">
+          <a
+            href="https://www.instagram.com/ocadocra/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-info"
+          >
+            <InstagramIcon /> @ocadocra
+          </a>
+          <a
+            href="https://www.behance.net/sofiacasavecchi1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Behance: Oca D'ocra
+          </a>
+          <a
+            href="https://ocadocra.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Substack: Almanacco dell'Oca
+          </a>
+          <a
+            href="https://ko-fi.com/ocadocra"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ko-fi: Oca D'ocra
+          </a>
+        </div>
         <form>
           <label htmlFor="name">Nome:</label>
           <input type="text" id="name" name="name" required />
