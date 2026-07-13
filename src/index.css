@@ -1,7 +1,7 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #f2e8cf;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -108,4 +108,17 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* Media query */
+/* Tablet e schermi piccoli */
+@media (max-width: 899px) {
+}
+
+/* Solo smartphone */
+@media (max-width: 599px) {
+}
+
+/* Desktop piccoli e laptop */
+@media (max-width: 1199px) {
 }

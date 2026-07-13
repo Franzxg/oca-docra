@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
+  flex: 1;
 }
 
 .logo {
@@ -196,6 +197,19 @@
   display: block;
   margin: 24px auto;
   border-radius: 4px;
+}
+
+/* Media query */
+/* Tablet e schermi piccoli */
+@media (max-width: 899px) {
+}
+
+/* Solo smartphone */
+@media (max-width: 599px) {
+}
+
+/* Desktop piccoli e laptop */
+@media (max-width: 1199px) {
 }
 
 .counter {
