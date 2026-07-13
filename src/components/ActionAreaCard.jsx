@@ -13,14 +13,35 @@ export default function ActionAreaCard({
   basePath,
 }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea component={Link} to={`${basePath}/${slug}`}>
+    <Card
+      sx={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <CardActionArea
+        component={Link}
+        to={`${basePath}/${slug}`}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          alignItems: "stretch",
+        }}
+      >
         <CardMedia component="img" height="140" image={image} alt={title} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent sx={{ flexGrow: 1 }}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            sx={{ color: "#6e1707" }}
+          >
             {title}
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <Typography variant="body2" sx={{ color: "#6e1707" }}>
             {description}
           </Typography>
         </CardContent>

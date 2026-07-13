@@ -243,6 +243,16 @@
   box-sizing: border-box;
 }
 
+/* Stile per la pagina Illustrazioni */
+.illustrations-section,
+.racconti-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 24px 40px;
+  justify-items: stretch;
+}
+
 /* Stile del footer */
 .footer {
   width: 100%;
