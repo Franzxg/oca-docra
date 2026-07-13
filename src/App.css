@@ -53,13 +53,15 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 40px;
   width: 100%;
   min-height: 70px;
   box-sizing: border-box;
   top: 0;
   z-index: 10;
   gap: 24px;
+  border-bottom: 1px solid rgba(192, 164, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-logo {
@@ -70,7 +72,7 @@
 
 .navbar-logo img {
   width: auto;
-  height: 60px;
+  height: 200px;
   display: block;
 }
 
@@ -82,6 +84,7 @@
 }
 
 .navbar-links a {
+  position: relative;
   text-decoration: none;
   color: #c0a400;
   font-weight: 600;
@@ -95,6 +98,21 @@
 .navbar-links a:hover {
   transform: scale(1.08);
   color: #6e1707;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #6e1707;
+  transition: width 0.25s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .contacts-div {
@@ -124,7 +142,7 @@
 }
 
 .page-content {
-  padding-top: 15%; /* stessa altezza della navbar, per non farci finire sotto il contenuto */
+  padding-top: 24px;
   padding-bottom: 5%;
   flex: 1;
   min-height: 100vh;
