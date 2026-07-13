@@ -26,6 +26,16 @@
 .home-menu a {
   text-decoration: none;
   color: #c0a400;
+  font-weight: 600;
+  display: inline-block;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.home-menu a:hover {
+  transform: scale(1.08);
+  color: #6e1707;
 }
 
 .navbar {
