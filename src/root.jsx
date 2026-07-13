@@ -1,4 +1,11 @@
-import { Outlet, Scripts, ScrollRestoration, Meta, Links } from "react-router";
+import {
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  Meta,
+  Links,
+  useLocation,
+} from "react-router";
 import "@fontsource/pt-serif/400.css"; // regular
 import "@fontsource/pt-serif/700.css"; // bold
 import "@fontsource/pt-serif/400-italic.css"; // corsivo
@@ -32,15 +39,18 @@ export function Layout({ children }) {
 }
 
 export default function Root() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Navbar />
-        <div className="page-content">
+        {!isHome && <Navbar />}
+        <div className={isHome ? "" : "page-content"}>
           <Outlet />
         </div>
-        <Footer />
+        {!isHome && <Footer />}
       </ThemeProvider>
     </>
   );
