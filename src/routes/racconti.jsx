@@ -3,7 +3,7 @@ import TalesSection from "../components/TalesSection";
 export default function Racconti() {
   return (
     <>
-      <h2>Almanacco dell'Oca</h2>
+      <h1>Almanacco dell'Oca</h1>
       <p class="racconti-text">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
         cumque aut ad, libero praesentium distinctio ratione vitae adipisci

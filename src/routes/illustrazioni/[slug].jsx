@@ -12,7 +12,7 @@ export default function IllustrazioneDettaglio() {
 
   return (
     <div className="illustrazione-dettaglio">
-      <h2>{progetto.title}</h2>
+      <h1>{progetto.title}</h1>
       <ImageLightboxGallery images={progetto.gallery} />
       <p>{progetto.fullDescription}</p>
     </div>

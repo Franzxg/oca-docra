@@ -3,7 +3,7 @@ import BioSection from "../components/BioSection";
 export default function Biografia() {
   return (
     <>
-      <h2>Biografia</h2>
+      <h1>Biografia</h1>
       <BioSection />
     </>
   );
