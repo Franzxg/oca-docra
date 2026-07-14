@@ -112,6 +112,24 @@ src/
 
 Illustration and story images are kept out of version control (see `.gitignore`) to keep the repository lightweight and to avoid distributing the artist's original, unwatermarked files through the git history. These assets need to be provided separately when setting up the project locally or preparing it for deployment.
 
+## Try the demo
+
+This repository does **not** include the artist's real illustrations and stories: the `src/imgs/illustrazioni/` and `src/imgs/racconti/` folders are excluded via `.gitignore`, since that content belongs to the artist and isn't meant to be publicly redistributed.
+
+To run a fully working local demo instead, a set of placeholder assets is available here:
+
+**[Demo assets folder (Google Drive)](https://drive.google.com/drive/folders/10FufIr4ocfwNDJP6ffQGK-eY-NQUVwCI?usp=sharing)**
+
+The folder mirrors the exact file structure and filenames the code expects, so no code changes are required:
+
+1. Download the folder from the link above.
+2. Place its contents inside `src/imgs/`, matching the existing subfolder structure (`illustrazioni/`, `racconti/`).
+3. Run `npm install && npm run dev` as usual.
+
+**What's inside:** the illustration and story cover images are free, openly-licensed stock photos (via [Lorem Picsum](https://picsum.photos/), sourced from Unsplash, free for any use with no attribution required), used purely as visual placeholders. The short stories are replaced with generic Latin placeholder text — none of the artist's original writing is included.
+
+**What's *not* a placeholder:** the site logo (`logo-home.png`) is the artist's real, original artwork, and it **is** included in this repository as-is. Unlike the illustrations and stories, the logo is the site's own visual identity rather than a piece of the artist's personal portfolio — replacing it with a generic placeholder would misrepresent the site's actual branding and defeat the purpose of a demo, so it was kept unchanged.
+
 ## Roadmap
 
 - [ ] Deploy the site
