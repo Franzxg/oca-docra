@@ -133,8 +133,8 @@ The folder mirrors the exact file structure and filenames the code expects, so n
 ## Roadmap
 
 - [ ] Deploy the site
-- [ ] Add a working backend/email service for the contact form
-- [ ] Add image watermarking for uploaded illustrations
+- [ ] Hook up the contact form to an actual email-sending service (e.g. Formspree, Web3Forms, or EmailJS), so submissions reach the artist directly instead of only being logged to the console
+- [ ] Add multi-language support (Italian/English), likely via `react-i18next` or a similar library
 - [ ] Review accessibility (focus states, alt text coverage, color contrast)
 
 ## License
