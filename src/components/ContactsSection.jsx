@@ -1,5 +1,5 @@
 import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function ContactsSection() {
@@ -7,10 +7,19 @@ export default function ContactsSection() {
     <>
       <div className="contacts-div">
         <p className="contact-info">
-          <EmailIcon /> ocadocra.illustrazioni@gmail.com
+          <a href="mailto:demo@example.com" className="contact-link">
+            <EmailIcon /> demo@example.com
+          </a>
         </p>
         <p className="contact-info">
-          <LocalPhoneIcon /> +39 334 813 9839
+          <a
+            href="https://wa.me/391233456789"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            <WhatsAppIcon /> +39 123 345 6789
+          </a>
         </p>
         <div className="contact-social">
           <a
