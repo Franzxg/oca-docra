@@ -248,6 +248,16 @@
   font-size: 20px;
 }
 
+.contacts-intro {
+  margin: 0 30%;
+  text-align: center;
+  line-height: 1.5;
+
+  @media (max-width: 899px) {
+    margin: 0 10%;
+  }
+}
+
 .contacts-div button {
   background-color: #c0a400;
   color: #fff;

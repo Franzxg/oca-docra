@@ -54,7 +54,7 @@ export default function ContactsSection() {
           </a>
         </div>
         <h3>Scrivimi!</h3>
-        <p>
+        <p className="contacts-intro">
           Se vuoi contattarmi per parlare di una tua idea, per una proposta di
           collaborazione o per qualsiasi altra cosa, compila il form qua sotto!
         </p>
