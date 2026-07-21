@@ -1,6 +1,7 @@
 import EmailIcon from "@mui/icons-material/Email";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Form from "./Form.jsx";
 
 export default function ContactsSection() {
   return (
@@ -52,19 +53,12 @@ export default function ContactsSection() {
             Ko-fi: Oca D'ocra
           </a>
         </div>
-        <form>
-          <label htmlFor="name">Nome:</label>
-          <input type="text" id="name" name="name" required />
-          <label htmlFor="cognome">Cognome:</label>
-          <input type="text" id="cognome" name="cognome" required />
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label htmlFor="subject">Oggetto:</label>
-          <input type="text" id="subject" name="subject" required />
-          <label htmlFor="message">Messaggio:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit">Invia</button>
-        </form>
+        <h3>Scrivimi!</h3>
+        <p>
+          Se vuoi contattarmi per parlare di una tua idea, per una proposta di
+          collaborazione o per qualsiasi altra cosa, compila il form qua sotto!
+        </p>
+        <Form></Form>
       </div>
     </>
   );

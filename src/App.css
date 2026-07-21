@@ -248,27 +248,6 @@
   font-size: 20px;
 }
 
-.contacts-div input,
-.contacts-div textarea {
-  background-color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 12px;
-  font-family: inherit;
-  font-size: 16px;
-  color: #08060d;
-}
-
-.contacts-div input:focus,
-.contacts-div textarea:focus {
-  outline: 2px solid #c0a400;
-}
-
-.contacts-div textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
 .contacts-div button {
   background-color: #c0a400;
   color: #fff;
@@ -284,6 +263,17 @@
 
 .contacts-div button:hover {
   background-color: #6e1707;
+}
+
+.contacts-div button:disabled {
+  background-color: #fff;
+  color: #d3d3d3;
+  cursor: not-allowed;
+  transition: none;
+}
+
+.contacts-div button:disabled:hover {
+  background-color: #fff;
 }
 
 .contact-social {

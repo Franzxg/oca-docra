@@ -52,7 +52,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--heading);
   font-weight: 500;
   color: #c0a400;
@@ -73,6 +74,13 @@ h2 {
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+h3 {
+  font-size: 25px;
+  font-weight: 510;
   @media (max-width: 1024px) {
     font-size: 20px;
   }
