@@ -30,25 +30,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #f2e8cf;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
 html,
 body {
   overflow-x: hidden;
@@ -113,17 +94,4 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
-}
-
-/* Media query */
-/* Tablet e schermi piccoli */
-@media (max-width: 899px) {
-}
-
-/* Solo smartphone */
-@media (max-width: 599px) {
-}
-
-/* Desktop piccoli e laptop */
-@media (max-width: 1199px) {
 }
