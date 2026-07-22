@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { useForm, ValidationError } from "@formspree/react";
 
 const initialValues = {
   nome: "",
@@ -45,6 +46,7 @@ const fieldSx = {
 };
 
 export default function Form() {
+  const [formspreeState, handleFormspreeSubmit, resetFormspree] = useForm("xdaqlkdr");
   const [values, setValues] = useState(initialValues);
   const [touched, setTouched] = useState({});
 
@@ -68,21 +70,33 @@ export default function Form() {
     validators[field](values[field]),
   );
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     if (!isFormValid) return;
 
-    // TODO: qui andrà l'invio vero una volta deciso il servizio da usare
-    console.log("Dati del form:", values);
+    await handleFormspreeSubmit(event);
+  }
 
+  function handleSendAnother() {
     setValues(initialValues);
     setTouched({});
+    resetFormspree();
+  }
+
+   if (formspreeState.succeeded) {
+    return (
+      <div>
+        <p>Grazie per il tuo messaggio! Ti risponderò il prima possibile.</p>
+        <Button onClick={handleSendAnother}>Invia un altro messaggio</Button>
+      </div>
+    );
   }
 
   return (
     <form onSubmit={handleSubmit} noValidate>
       <TextField
         label="Nome"
+        name="nome"
         required
         value={values.nome}
         onChange={handleChange("nome")}
@@ -92,6 +106,7 @@ export default function Form() {
       />
       <TextField
         label="Cognome"
+        name="cognome"
         required
         value={values.cognome}
         onChange={handleChange("cognome")}
@@ -101,6 +116,7 @@ export default function Form() {
       />
       <TextField
         label="Email"
+        name="email"
         type="email"
         required
         value={values.email}
@@ -111,6 +127,7 @@ export default function Form() {
       />
       <TextField
         label="Oggetto"
+        name="oggetto"
         required
         value={values.subject}
         onChange={handleChange("subject")}
@@ -120,6 +137,7 @@ export default function Form() {
       />
       <TextField
         label="Messaggio"
+        name="messaggio"
         required
         multiline
         rows={4}
@@ -129,8 +147,9 @@ export default function Form() {
         helperText={showError("message") ? "Il messaggio è obbligatorio" : ""}
         sx={fieldSx}
       />
-      <Button type="submit" disabled={!isFormValid}>
-        Invia
+      <ValidationError prefix="Messaggio" field="message" errors={formspreeState.errors} />
+      <Button type="submit" disabled={!isFormValid || formspreeState.submitting}>
+        {formspreeState.submitting ? "Invio in corso..." : "Invia"}
       </Button>
     </form>
   );
