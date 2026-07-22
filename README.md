@@ -1,8 +1,8 @@
-# Oca d'Ocra — Illustrator Portfolio Website
+# Oca d'Ocra: Illustrator Portfolio Website
 
 Repository: [github.com/Franzxg/oca-docra](https://github.com/Franzxg/oca-docra)
 
-A personal portfolio website built for an illustrator friend, showcasing her illustration projects and short stories ("Almanacco dell'Oca"). This project was also my first hands-on experience with React, and I used it as a learning ground for concepts like component-based architecture, client-side routing, and responsive design.
+A personal portfolio website built for an illustrator friend, showcasing her illustration projects and short stories. This project was also my first hands-on experience with React, and I used it as a learning ground for concepts like component-based architecture, client-side routing, and responsive design.
 
 > **Status:** In development — not yet deployed.
 
@@ -143,4 +143,4 @@ No license has been assigned yet. All illustration and story content belongs to 
 
 ## Author's note
 
-This is a personal project built while learning React from scratch — some implementation choices reflect that learning process rather than production-grade conventions, and the codebase is still evolving as new features are added.
+This is a personal project built while learning React from scratch; some implementation choices reflect that learning process rather than production-grade conventions, and the codebase is still evolving as new features are added.
