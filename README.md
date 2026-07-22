@@ -30,6 +30,7 @@ The goal was to create a clean, editorial-style site that lets the illustrator s
 - [Material UI (MUI)](https://mui.com/) + `@mui/icons-material`
 - [react-markdown](https://github.com/remarkjs/react-markdown) + [remark-gfm](https://github.com/remarkjs/remark-gfm)
 - [Fontsource](https://fontsource.org/) (self-hosted PT Serif, no external font requests)
+- [Formspree](https://formspree.io/) (`@formspree/react`) — handles contact form submissions without a custom backend
 
 ## Routes
 
@@ -133,7 +134,6 @@ The folder mirrors the exact file structure and filenames the code expects, so n
 ## Roadmap
 
 - [ ] Deploy the site
-- [ ] Hook up the contact form to an actual email-sending service (e.g. Formspree, Web3Forms, or EmailJS), so submissions reach the artist directly instead of only being logged to the console
 - [ ] Add multi-language support (Italian/English), likely via `react-i18next` or a similar library
 - [ ] Review accessibility (focus states, alt text coverage, color contrast)
 
