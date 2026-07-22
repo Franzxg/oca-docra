@@ -3,6 +3,9 @@ import { Link } from "react-router";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import logo from "../imgs/logo-home.png";
+import NavDropdown from "./NavDropdown";
+import { illustrazioni } from "../data/illustrazioniData.js";
+import { racconti } from "../data/raccontiData.js";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,11 +25,24 @@ function Navbar() {
       </div>
 
       <div className="navbar-links">
-        {links.map((link) => (
-          <Link key={link.to} to={link.to}>
-            {link.label}
-          </Link>
-        ))}
+        <Link to="/">Home</Link>
+
+        <NavDropdown
+          label="Illustrazioni"
+          to="/illustrazioni"
+          items={illustrazioni}
+          basePath="/illustrazioni"
+        />
+
+        <NavDropdown
+          label="Almanacco dell'oca"
+          to="/racconti"
+          items={racconti}
+          basePath="/racconti"
+        />
+
+        <Link to="/biografia">Biografia</Link>
+        <Link to="/contatti">Contatti</Link>
       </div>
 
       <button
