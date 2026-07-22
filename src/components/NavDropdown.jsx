@@ -1,53 +1,46 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router";
-import Popover from "@mui/material/Popover";
 
 export default function NavDropdown({ label, to, items, basePath }) {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const [open, setOpen] = useState(false);
+  const closeTimeoutRef = useRef(null);
 
-  function handlePopoverOpen(event) {
-    setAnchorEl(event.currentTarget);
+  function handleOpen() {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setOpen(true);
   }
 
-  function handlePopoverClose() {
-    setAnchorEl(null);
+  function handleClose() {
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpen(false);
+    }, 150);
   }
 
   return (
-    <div onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
+    <div
+      className="nav-dropdown"
+      onMouseEnter={handleOpen}
+      onMouseLeave={handleClose}
+    >
       <Link to={to}>{label}</Link>
 
-      <Popover
-        sx={{ pointerEvents: "none" }}
-        open={open}
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-        transformOrigin={{ vertical: "top", horizontal: "center" }}
-        disableRestoreFocus
-        onClose={handlePopoverClose}
-        slotProps={{
-          paper: {
-            onMouseEnter: handlePopoverOpen,
-            onMouseLeave: handlePopoverClose,
-            className: "nav-dropdown-paper",
-            sx: { pointerEvents: "auto" },
-          },
-        }}
-      >
+      <div className={`nav-dropdown-paper ${open ? "nav-dropdown-open" : ""}`}>
         <div className="nav-dropdown-list">
           {items.map((item) => (
             <Link
               key={item.slug}
               to={`${basePath}/${item.slug}`}
               className="nav-dropdown-item"
-              onClick={handlePopoverClose}
+              onClick={() => setOpen(false)}
             >
               {item.title}
             </Link>
           ))}
         </div>
-      </Popover>
+      </div>
     </div>
   );
 }
