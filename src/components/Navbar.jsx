@@ -10,14 +10,6 @@ import { racconti } from "../data/raccontiData.js";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const links = [
-    { to: "/", label: "Home" },
-    { to: "/illustrazioni", label: "Illustrazioni" },
-    { to: "/racconti", label: "Almanacco dell'oca" },
-    { to: "/biografia", label: "Biografia" },
-    { to: "/contatti", label: "Contatti" },
-  ];
-
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -32,6 +24,7 @@ function Navbar() {
           to="/illustrazioni"
           items={illustrazioni}
           basePath="/illustrazioni"
+          variant="desktop"
         />
 
         <NavDropdown
@@ -39,6 +32,7 @@ function Navbar() {
           to="/racconti"
           items={racconti}
           basePath="/racconti"
+          variant="desktop"
         />
 
         <Link to="/biografia">Biografia</Link>
@@ -57,11 +51,32 @@ function Navbar() {
       <div
         className={`navbar-mobile-menu ${menuOpen ? "navbar-mobile-menu-open" : ""}`}
       >
-        {links.map((link) => (
-          <Link key={link.to} to={link.to} onClick={() => setMenuOpen(false)}>
-            {link.label}
-          </Link>
-        ))}
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          Home
+        </Link>
+
+        <NavDropdown
+          label="Illustrazioni"
+          to="/illustrazioni"
+          items={illustrazioni}
+          basePath="/illustrazioni"
+          variant="mobile"
+        />
+
+        <NavDropdown
+          label="Almanacco dell'oca"
+          to="/racconti"
+          items={racconti}
+          basePath="/racconti"
+          variant="mobile"
+        />
+
+        <Link to="/biografia" onClick={() => setMenuOpen(false)}>
+          Biografia
+        </Link>
+        <Link to="/contatti" onClick={() => setMenuOpen(false)}>
+          Contatti
+        </Link>
       </div>
     </nav>
   );
