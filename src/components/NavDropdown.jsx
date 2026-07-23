@@ -8,6 +8,7 @@ export default function NavDropdown({
   items,
   basePath,
   variant = "desktop",
+  onNavigate,
 }) {
   const [open, setOpen] = useState(false);
   const closeTimeoutRef = useRef(null);
@@ -33,11 +34,16 @@ export default function NavDropdown({
     setOpen((prev) => !prev);
   }
 
+  function handleItemClick() {
+    setOpen(false);
+    if (onNavigate) onNavigate();
+  }
+
   if (variant === "mobile") {
     return (
       <div className="nav-dropdown-mobile">
         <div className="nav-dropdown-mobile-header">
-          <Link to={to} onClick={() => setOpen(false)}>
+          <Link to={to} onClick={handleItemClick}>
             {label}
           </Link>
           <button
@@ -58,7 +64,7 @@ export default function NavDropdown({
               key={item.slug}
               to={`${basePath}/${item.slug}`}
               className="nav-dropdown-mobile-item"
-              onClick={() => setOpen(false)}
+              onClick={handleItemClick}
             >
               {item.title}
             </Link>

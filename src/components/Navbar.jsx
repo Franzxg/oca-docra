@@ -61,6 +61,7 @@ function Navbar() {
           items={illustrazioni}
           basePath="/illustrazioni"
           variant="mobile"
+          onNavigate={() => setMenuOpen(false)}
         />
 
         <NavDropdown
@@ -69,6 +70,7 @@ function Navbar() {
           items={racconti}
           basePath="/racconti"
           variant="mobile"
+          onNavigate={() => setMenuOpen(false)}
         />
 
         <Link to="/biografia" onClick={() => setMenuOpen(false)}>
